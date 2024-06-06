@@ -32,12 +32,14 @@ public class ProducerConsumer {
             consumer.stop();
         }
 
-
+        long startTime = System.currentTimeMillis();
+        long endTime = System.currentTimeMillis();
         int total=0;
         for(Consumer consumer:consumers){
             total+=consumer.getSum();
         }
         System.out.println("Total sum: "+ total);
+        System.out.println("Tiempo de ejecucion: "+(endTime-startTime)+"ms");
 
     }
 
